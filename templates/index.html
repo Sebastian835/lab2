@@ -1,27 +1,35 @@
-<center>
-    <h1>
-        TO DO LIST
-    </h1>
-    <br><br>
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- CAJA DE TEXTO PARA LAS TAREAS -->
-    <form action="/add_tareas" method="POST">
-        <input type="text" name="Nombre_Tarea" placeholder="Tarea">
-        <input type="text" name="Correo" placeholder="Correo">
-        <select name="prioridad">
-            <option></option>
-            <option value="Baja">Baja</option>
-            <option value="Media">Media</option>
-            <option value="Alta">Alta</option>
-        </select>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>
+            TO DO LIST
+        </h1>
         <br><br>
-        <!-- BOTON PARA MOSTRAR TAREAS -->
-        <button type="sbmit">Ingresar</button>
-    </form>
 
+        <!-- CAJA DE TEXTO PARA LAS TAREAS -->
+        <form>
+            <input type="text" name="Nombre_Tarea" placeholder="Tarea">
+            <input type="text" name="Correo" placeholder="Correo">
+            <select name="prioridad">
+                <option></option>
+                <option value="Baja">Baja</option>
+                <option value="Media">Media</option>
+                <option value="Alta">Alta</option>
+            </select>
+            <br><br>
+            <!-- BOTON PARA MOSTRAR TAREAS -->
+            <button type="sbmit">Ingresar</button>
+        </form>
+    </center>
+</body>
 
-
-</center>
-
-
-<!--<script src="{{url_for('static', filename='js/script.js')}}"></script> -->
+</html>
