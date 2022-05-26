@@ -10,6 +10,19 @@ def principal():
     return render_template('index.html')
 
 
+
+
+#main del programa
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+
+
+
+
+
+
 @app.route('/')
 def contacto():
     return render_template(' ')
@@ -19,7 +32,3 @@ def contacto():
 def lenguajesdeprogramacion():
     return render_template(' ')
 
-
-#main del programa
-if __name__ == '__main__':
-    app.run(debug=True)
