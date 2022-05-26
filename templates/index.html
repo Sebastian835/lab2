@@ -1,43 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<center>
+    <h1>
+        TO DO LIST
+    </h1>
+    <br><br>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>Tareas</title>
-</head>
-
-<body>
-    <center>
-        <h1>
-            TO DO LIST
-        </h1>
-        <br><br>
-
-        <!-- CAJA DE TEXTO PARA LAS TAREAS -->
-        <form action="">
-            <input type="text" name="Nombre_Tarea" placeholder="Tarea"></input>
-            <input type="text" name="Correo" placeholder="Correo"></input>
-            <select name="prioridad">
-            <option ></option>
+    <!-- CAJA DE TEXTO PARA LAS TAREAS -->
+    <form action="/add_tareas" method="POST">
+        <input type="text" name="Nombre_Tarea" placeholder="Tarea">
+        <input type="text" name="Correo" placeholder="Correo">
+        <select name="prioridad">
+            <option></option>
             <option value="Baja">Baja</option>
             <option value="Media">Media</option>
             <option value="Alta">Alta</option>
-          </select>
-        </form>
-        <br>
+        </select>
+        <br><br>
         <!-- BOTON PARA MOSTRAR TAREAS -->
         <button type="sbmit">Ingresar</button>
+    </form>
 
 
 
-    </center>
+</center>
 
-</body>
-
-</html>
 
 <!--<script src="{{url_for('static', filename='js/script.js')}}"></script> -->
