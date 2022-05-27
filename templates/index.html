@@ -34,16 +34,25 @@
             <button type="sbmit">Ingresar</button>
         </form>
 
-        <br><br>
-
-
-        <ul>
-            {% for i in listaTareas %}
-            <li id="tareas">{{ i }}</li>
-            {% endfor %}
-        </ul>
+        <br><br> {% endblock %}
+        <table>
+            <tr>
+                <th>Nombre Tarea</th>
+                <th>Correo</th>
+                <th>Prioridad</th>
+            </tr>
+            <tr>
+                {% for i in NombreTarea %}
+                <td>{{ i }}</td>
+                {% endfor %} {% for j in CorreoTarea %}
+                <td>{{ j }}</td>
+                {% endfor %} {% for k in PrioridadTarea %}
+                <td>{{ k }}</td>
+                {% endfor %}
+            </tr>
+        </table>
     </center>
-    {% endblock %}
+
 </body>
 
 <!-- JavaScript Bundle with Popper --->

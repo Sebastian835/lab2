@@ -8,7 +8,7 @@ app = Flask(__name__)  # incializar variable
 # funcion de bienvenida
 @app.route('/')
 def index():
-    return render_template('index.html', listaTareas = tareaNombre)
+    return render_template('index.html', NombreTarea = tareaNombre, CorreoTarea = correo, PrioridadTarea = prioridad)
 
 
 tareaNombre = []
@@ -32,6 +32,9 @@ def add_tareas():
       correo.append(Correo_Tarea)
       prioridad.append(prioridad_Tarea)
 
+      #tareaNombre.clear()
+      #correo.clear()
+      #prioridad.clear()
       return redirect(url_for('index'))   
           
   
