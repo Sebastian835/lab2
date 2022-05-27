@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    {% block body %}
     <center>
         <h1>
             TO DO LIST
@@ -33,9 +34,18 @@
             <button type="sbmit">Ingresar</button>
         </form>
 
-        <h1>{{names}}</h1>
+        <br><br>
+
+
+        <ul>
+            {% for i in listaTareas %}
+            <li id="tareas">{{ i }}</li>
+            {% endfor %}
+        </ul>
     </center>
+    {% endblock %}
 </body>
+
 <!-- JavaScript Bundle with Popper --->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
