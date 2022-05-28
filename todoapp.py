@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for  # librerias
-from glob import escape
-from os import abort
+import numpy as np
 
 app = Flask(__name__)  # incializar variable
 
@@ -8,7 +7,7 @@ app = Flask(__name__)  # incializar variable
 # funcion de bienvenida
 @app.route('/')
 def index():
-    return render_template('index.html', NombreTarea = tareaNombre, CorreoTarea = correo, PrioridadTarea = prioridad)       #pasa el parametro al index
+    return render_template('index.html', Tarea_Nombre = tareaNombre, Tarea_Correo = correo, Tarea_Prioridad = prioridad )       #pasa el parametro al index
 
 #arreglos
 tareaNombre = []
@@ -24,21 +23,18 @@ def add_tareas():
       Correo_Tarea = request.form['Correo']
       prioridad_Tarea = request.form['prioridad']
 
-      print(Nombre_Tarea)
-      print(Correo_Tarea)
-      print(prioridad_Tarea)
-      
       #Almacener datos en los arreglos
       tareaNombre.append(Nombre_Tarea)
       correo.append(Correo_Tarea)
       prioridad.append(prioridad_Tarea)
-
+      
       #tareaNombre.clear()
       #correo.clear()
       #prioridad.clear()
       return redirect(url_for('index'))   
-          
-  
+
 # main del programa
 if __name__ == '__main__':
     app.run(debug=True)
+
+

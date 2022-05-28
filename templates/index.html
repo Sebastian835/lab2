@@ -11,7 +11,7 @@
     <title>TO DO LIST</title>
 </head>
 
-<body>
+<body style="background-color:#1fd3af;">
     {% block body %}
     <center>
         <h1>
@@ -22,7 +22,7 @@
         <!-- CAJA DE TEXTO PARA LAS TAREAS --->
         <form action="/" method="POST">
             <input type="text" name="Nombre_Tarea" placeholder="Tarea">
-            <input type="text" name="Correo" placeholder="Correo">
+            <input type="email" name="Correo" placeholder="Correo">
             <select name="prioridad">
                 <option></option>
                 <option value="Baja">Baja</option>
@@ -34,24 +34,14 @@
             <button type="sbmit">Ingresar</button>
         </form>
 
-        <br><br> {% endblock %}
-        <table>
-            <tr>
-                <th>Nombre Tarea</th>
-                <th>Correo</th>
-                <th>Prioridad</th>
-            </tr>
-            <tr>
-                {% for i in NombreTarea %}
-                <td>{{ i }}</td>
-                {% endfor %} {% for j in CorreoTarea %}
-                <td>{{ j }}</td>
-                {% endfor %} {% for k in PrioridadTarea %}
-                <td>{{ k }}</td>
-                {% endfor %}
-            </tr>
-        </table>
+        <br> {% for i in Tarea_Nombre %}
+        <li>{{ i }}</li>
+        {% endfor %}
+
+
     </center>
+
+    {% endblock %}
 
 </body>
 
