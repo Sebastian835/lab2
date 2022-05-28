@@ -8,9 +8,9 @@ app = Flask(__name__)  # incializar variable
 # funcion de bienvenida
 @app.route('/')
 def index():
-    return render_template('index.html', NombreTarea = tareaNombre, CorreoTarea = correo, PrioridadTarea = prioridad)
+    return render_template('index.html', NombreTarea = tareaNombre, CorreoTarea = correo, PrioridadTarea = prioridad)       #pasa el parametro al index
 
-
+#arreglos
 tareaNombre = []
 correo = []
 prioridad = []
@@ -27,7 +27,8 @@ def add_tareas():
       print(Nombre_Tarea)
       print(Correo_Tarea)
       print(prioridad_Tarea)
-
+      
+      #Almacener datos en los arreglos
       tareaNombre.append(Nombre_Tarea)
       correo.append(Correo_Tarea)
       prioridad.append(prioridad_Tarea)
