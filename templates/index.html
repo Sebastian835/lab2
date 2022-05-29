@@ -20,7 +20,7 @@
         <br><br>
 
         <!-- CAJA DE TEXTO PARA LAS TAREAS --->
-        <form action="/" method="POST">
+        <form action="/enviar" method="POST">
             <input type="text" name="Nombre_Tarea" placeholder="Tarea">
             <input type="email" name="Correo" placeholder="Correo">
             <select name="prioridad">
@@ -33,6 +33,12 @@
             <!-- BOTON PARA MOSTRAR TAREAS -->
             <button type="sbmit">Ingresar</button>
         </form>
+        <br>
+        <form action="/borrar" method="POST">
+            <button type="sbmit"> Borrar </button>
+        </form>
+
+        <br>
 
         <br> {% for i in Tarea_Nombre %}
         <li>{{ i }}</li>
